@@ -1,5 +1,5 @@
 
-public class Mascota {
+public abstract class Mascota {
 
 	private String nombre, color, especie;
 	private Boolean esMamifero;
@@ -11,13 +11,14 @@ public class Mascota {
 		this.especie = especie;
 	}
 	
-	public String comunicarse() {
-		return "Me estoy comunicando";
-	}
+	/**
+	 * Metodo abstracto: Unicamente colocamos la firma del metodo
+	 * dejando que las clases hijas sobreescriban su funcionalidad.
+	 * @return String
+	 */
+	public abstract String comunicarse();
 	
-	public String comer() {
-		return "Estoy comiendo";
-	}
+	public abstract String comer();
 
 	public String getNombre() {
 		return nombre;

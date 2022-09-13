@@ -27,7 +27,6 @@ public class Main {
 		System.out.println(robert.comunicarse());
 		System.out.println(gatito.jugar());
 		
-		
 	}
 	
 	public static String saludar(String nombre) {

@@ -1,5 +1,7 @@
 package asociaciones;
 
+import Interfaces.Comunicable;
+
 public class Persona {
 	
 	protected int dni;
@@ -7,6 +9,7 @@ public class Persona {
 	protected String apellido;
 	protected String genero;
 	protected String email;
+	protected String mensaje;
 	
 	public Persona(int dni, String nombre, String apellido, String genero, String email) {
 		this.dni = dni;
@@ -14,6 +17,7 @@ public class Persona {
 		this.apellido = apellido;
 		this.genero = genero;
 		this.email = email;
+		this.mensaje = "";
 	}
 
 	public int getDni() {
@@ -55,14 +59,26 @@ public class Persona {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+
+	public String getMensaje() {
+		return mensaje;
+	}
 
 	@Override
 	public String toString() {
 		return "Persona [dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido
 				+ ", genero=" + genero + ", email=" + email + "]";
 	}
+
+	public void recibirMensaje(String mensaje) {
+		// TODO Auto-generated method stub
+		this.mensaje= mensaje;
+	}
 	
-	
-	
+	public void escribirMensaje(Comunicable obj, String mensaje) {
+		this.mensaje = mensaje;
+		obj.recibirMensaje(mensaje);
+	}	
 	
 }

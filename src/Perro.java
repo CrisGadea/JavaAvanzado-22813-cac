@@ -6,8 +6,15 @@ public class Perro extends Mascota {
 		// TODO Auto-generated constructor stub
 	}
 	
+	@Override
 	public String comunicarse() {
 		return "Guau";
+	}
+
+	@Override
+	public String comer() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

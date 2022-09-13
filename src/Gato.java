@@ -6,12 +6,19 @@ public class Gato extends Mascota {
 		// TODO Auto-generated constructor stub
 	}
 	
+	@Override
 	public String comunicarse() {
 		return "Miau";
 	}
 	
 	public String jugar() {
 		return "Miaaauuu estoy jugando";
+	}
+
+	@Override
+	public String comer() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
